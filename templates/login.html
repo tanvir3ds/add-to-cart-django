@@ -1,13 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 
-    <h1> Login</h1>
-    
-</body>
-</html>
+
+
+<br>
+<div class="wrapper ">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <!-- Icon -->
+    <br>
+    <div class=" first">
+      <h1>Login</h1>
+    </div>
+
+    <!-- Login Form -->
+
+    <form action="login" method="POST">
+      {% csrf_token %}
+
+
+
+      <input type="text" name="username" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" class=" fourth" value="Login">
+    </form><br>
+    <div>
+        
+    </div>
+
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href=" #">Create a account</a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
